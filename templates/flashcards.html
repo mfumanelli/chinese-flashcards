@@ -7,7 +7,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!--<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> -->
     <style type="text/css">
-        input.btn-primary{
+        a.btn-primary{
             background-color: #6f8877; border: 2px solid #6f8877;
             *background-color: #6f8877;
             background-image: -moz-linear-gradient(top, #6f8877, #6f8877);
@@ -18,12 +18,12 @@
             background-repeat: repeat-x;
             border-color: #6f8877 #6f8877 #6f8877;
         }
-        input.btn-primary:hover,
-        input.btn-primary:focus,
-        input.btn-primary:visited,
-        input.btn-primary:active,
-        input.btn-primary.disabled,
-        input.btn-primary[disabled]{
+        a.btn-primary:hover,
+        a.btn-primary:focus,
+        a.btn-primary:visited,
+        a.btn-primary:active,
+        a.btn-primary.disabled,
+        a.btn-primary[disabled]{
         background-image: -moz-linear-gradient(top, #afbeb4, #afbeb4);
         background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#afbeb4), to(#afbeb4));
         background-image: -webkit-linear-gradient(top, #afbeb4, #afbeb4);
@@ -55,13 +55,15 @@
     transform: translate(-50%, -50%)" size="+4">
                         {{pinyin}}
                     </font>
-                <a class="btn btn-primary" href="{{ url_for('translation') }}" style="
-text-align: center; margin: 0;
-    position: absolute;
-    top: 90%;
-    right: 20%;
-    margin-right: -20%;
-    transform: translate(-50%, -50%)">Translate</a>
+               <a class="btn btn-primary" href="{{ url_for('translation') }}" style="
+                        text-align: center; margin: 0;
+                            position: absolute;
+                            top: 90%;
+                            right: 20%;
+                            margin-right: -20%;
+                            transform: translate(-50%, -50%)">
+                   Translate
+               </a>
             </div>
 </form>
 </body>
