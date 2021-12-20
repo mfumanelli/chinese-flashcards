@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style type="text/css">
+    body, html{height: 100%;}
+    body{margin-bottom: 0; padding: 30px 50px 50px 25px;}
+    a.nav-link{color:#aa1e13; font-size: large}
+    input.btn-primary{
+        background-color: #aa1e13; border: 2px solid #aa1e13;
+        *background-color: #aa1e13;
+        background-image: -moz-linear-gradient(top, #aa1e13, #aa1e13);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#aa1e13), to(#aa1e13));
+        background-image: -webkit-linear-gradient(top, #aa1e13, #aa1e13);
+        background-image: -o-linear-gradient(top, #aa1e13, #aa1e13);
+        background-image: linear-gradient(to bottom, #aa1e13, #aa1e13);
+        background-repeat: repeat-x;
+        border-color: #aa1e13 #aa1e13 #aa1e13;
+    }
+    input.btn-primary:hover,
+    input.btn-primary:focus,
+    input.btn-primary:visited,
+    input.btn-primary:active,
+    input.btn-primary.active,
+    input.btn-primary.disabled,
+    input.btn-primary[disabled]{
+        background-image: -moz-linear-gradient(top, #c5281c, #c5281c);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c5281c), to(#c5281c));
+        background-image: -webkit-linear-gradient(top, #c5281c, #c5281c);
+        background-image: -o-linear-gradient(top, #c5281c, #c5281c);
+        background-image: linear-gradient(to bottom, #c5281c, #c5281c);
+        background-repeat: repeat-x;
+        border-color: #c5281c #c5281c #c5281c;
+    }
+    b{color:#5c5c5c}
+    label{color:#5c5c5c}
+    th{color:#5c5c5c}
+    h1,h2,h3,h4,h5{color:#5c5c5c}
+    table, th, td, tr {
+  border: 1px medium solid transparent;
+  padding: 5px;
+}
+table{
+    border-collapse:separate;
+    border-spacing: 10px;
+}
+img#logo-generali {
+    width: 90px;
+    float: right;
+    display: block;
+    margin-right: 25px;
+}
+#head-search-engine {
+    background-color: #aa1e13;
+    height: 95px;
+    width: 100%;
+}
+div {
+  border-radius: 10px;
+}
+#div_results {
+  border-radius: 10px;
+  background-color: #efefef;
+}
+#div_num_results {
+  border-radius: 10px;
+  background-color: #efefef;
+}
+hr {
+   border: 2px solid #555;
+   border-radius: 5px;
+}
+</style>
+<!--<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> -->
+</head>
+<body>
+<form method=get action="">
+<div id="head-search-engine" style="background-color: #aa1e13; display: flex; flex-direction: row;">
+    <h2 style="color:white; height: 85px; width: 100%; text-align: left; padding-top: 24px; padding-left: 24px;">Motore di ricerca note polizze</h2>
+    <img id="logo-generali" src="{{url_for('static', filename='img/Generali-LOGO-bianco.png')}}" alt="Logo">
+</div>
+    <div>
+<table style="margin-bottom: 1px; margin-top: 10px; margin-left: 20px; display: block;">
+    <tr>
+        <td> <label style="font-weight:bold; margin-right: 15px;">Inserisci una query</label>
+        <input type="text" id="query" name="query" placeholder="query"></td>
+        <td> <label style="font-weight:bold; margin-right: 15px;">Numero documenti da restituire</label>
+        <input type="number" id="num_docs" name="num_docs" placeholder="num_docs"></td>
+        <td> <label style="font-weight:bold; margin-right: 15px;">Ricerca parola esatta</label>
+            <input type="checkbox" id="stemming" name="stemming"></td>
+    </tr>
+</table>
+        <input class="btn btn-primary" type=submit name="action" value="Avvia ricerca" style="margin-left:85px background-color: #aa1e13">
+        </div>
+</form>
+</body>
+</html>
