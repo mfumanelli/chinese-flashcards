@@ -36,30 +36,33 @@
 </head>
 <body>
 <form method=get action="">
-<div style="background-color: #415046; height: 100vh;">
-    <h1 style="color:white; margin: 0;
+            <div id="flashcards" style="background-color: #415046; height: 100vh;">
+                    <font style="color:white; margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)" size="+4">
+                    {% for flashcard_chinese in flashcards_chinese %}
+                        {{flashcard_chinese}}
+                    {% endfor %}
+                    </font>
+                <font style="color:white; margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)">
-        Welcome to Chinese Flashcards! </h1>
-    <h1 style="color:white; margin: 0;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)">
-        欢迎！</h1>
-    <!--<img id="logo-generali" src="{{url_for('static', filename='img/Generali-LOGO-bianco.png')}}" alt="Logo">-->
-    <input class="btn btn-primary" type=submit name="action" value="LALALA" style="background-color: #764c7c;
+    transform: translate(-50%, -50%)" size="+4">
+                        {{pinyin}}
+                    </font>
+                <a class="btn btn-primary" href="{{ url_for('translation') }}" style="
 text-align: center; margin: 0;
     position: absolute;
     top: 90%;
     right: 20%;
     margin-right: -20%;
-    transform: translate(-50%, -50%)">
-</div>
+    transform: translate(-50%, -50%)">Translate</a>
+            </div>
 </form>
 </body>
 </html>
