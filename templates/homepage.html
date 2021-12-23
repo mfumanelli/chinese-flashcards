@@ -5,7 +5,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!--<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> -->
     <style type="text/css">
         a.btn-primary{
             background-color: #6f8877; border: 2px solid #6f8877;
@@ -37,29 +36,20 @@
 <body>
 <form method=get action="">
 <div style="background-color: #415046; height: 100vh;">
-    <h1 style="color:white; margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)">
-        Welcome to Chinese Flashcards! </h1>
-    <h1 style="color:white; margin: 0;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)">
-        欢迎！</h1>
-    <!--<img id="logo-generali" src="{{url_for('static', filename='img/Generali-LOGO-bianco.png')}}" alt="Logo">-->
-    <a class="btn btn-primary" href="{{ url_for('flashcards') }}" style="
-text-align: center; margin: 0;
-    position: absolute;
-    top: 90%;
-    right: 20%;
-    margin-right: -20%;
-    transform: translate(-50%, -50%)"><center>Start reviewing</center></a>
-</div>
+    <div style="text-align:center; background-color: #415046;  top: 40%; position: relative;">
+    <h1 style="color:white;">
+        Welcome to Chinese Flashcards!</h1>
+    <h1 style="color:white;">
+        欢迎</h1>
+        </div>
+    <a class="btn btn-primary" href="{{ url_for('flashcards') }}" style="text-align: center; margin: 0;
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%); width:200px;  height:40px;" >
+        <center>Start reviewing</center></a>
+    </div>
 </form>
 </body>
 </html>

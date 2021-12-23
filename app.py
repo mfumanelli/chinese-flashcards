@@ -19,17 +19,15 @@ def flashcards():
     global df
     while df.shape[0] > 0:
         if request.method == "GET":
-            print(df.shape[0])
+            print(f'Number of words left: {df.shape[0]}')
             random_i = df.sample(1).index[0]
-            print(random_i)
-            print(request.args.get('up'))
             #print(request.args.get('translate'))
 
             df_chinese = df['Chinese'][random_i]
             df_pinyin = df['Pinyin'][random_i]
             df_english = df['English'][random_i]
 
-            if request.args.get('down') == "I didn't know this word! (￣︿￣)":
+            if request.args.get('down') == "I didn't know this word! (T︿T)":
                 df = df.copy()
 
             else:

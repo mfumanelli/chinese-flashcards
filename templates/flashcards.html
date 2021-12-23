@@ -57,6 +57,56 @@
         background-repeat: repeat-x;
         border-color: #afbeb4 #afbeb4 #afbeb4;
     }
+
+    input.btn-primary-up{
+            background-color: #506356; border: 2px solid #506356;
+            *background-color: #506356;
+            background-image: -moz-linear-gradient(top, #506356, #506356);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#506356), to(#506356));
+            background-image: -webkit-linear-gradient(top, #506356, #506356);
+            background-image: -o-linear-gradient(top, #506356, #506356);
+            background-image: linear-gradient(to bottom, #506356, #506356);
+            background-repeat: repeat-x;
+            border-color: #506356 #506356 #506356;
+        }
+        input.btn-primary-up:hover,
+        input.btn-primary-up:focus,
+        input.btn-primary-up:visited,
+        input.btn-primary-up:active,
+        input.btn-primary-up.disabled,
+        input.btn-primary-up[disabled]{
+        background-image: -moz-linear-gradient(top, #afbeb4, #afbeb4);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#afbeb4), to(#afbeb4));
+        background-image: -webkit-linear-gradient(top, #afbeb4, #afbeb4);
+        background-image: -o-linear-gradient(top, #afbeb4, #afbeb4);
+        background-image: linear-gradient(to bottom, #afbeb4, #afbeb4);
+        background-repeat: repeat-x;
+        border-color: #afbeb4 #afbeb4 #afbeb4;
+}
+        input.btn-primary-down{
+            background-color: #232b25; border: 2px solid #232b25;
+            *background-color: #232b25;
+            background-image: -moz-linear-gradient(top, #232b25, #232b25);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#232b25), to(#232b25));
+            background-image: -webkit-linear-gradient(top, #232b25, #232b25);
+            background-image: -o-linear-gradient(top, #232b25, #232b25);
+            background-image: linear-gradient(to bottom, #232b25, #232b25);
+            background-repeat: repeat-x;
+            border-color: #232b25 #232b25 #232b25;
+        }
+        input.btn-primary-down:hover,
+        input.btn-primary-down:focus,
+        input.btn-primary-down:visited,
+        input.btn-primary-down:active,
+        input.btn-primary-down.disabled,
+        input.btn-primary-down[disabled]{
+        background-image: -moz-linear-gradient(top, #afbeb4, #afbeb4);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#afbeb4), to(#afbeb4));
+        background-image: -webkit-linear-gradient(top, #afbeb4, #afbeb4);
+        background-image: -o-linear-gradient(top, #afbeb4, #afbeb4);
+        background-image: linear-gradient(to bottom, #afbeb4, #afbeb4);
+        background-repeat: repeat-x;
+        border-color: #afbeb4 #afbeb4 #afbeb4;}
     </style>
 </head>
 <body>
@@ -98,7 +148,7 @@
     transform: translate(-50%, -50%)">
         <font style="color:white;" size="+4">{{flashcards_english}}</font>
   </div>
-        <input class="btn btn-primary" id="up" name="up" placeholder="up" style="
+        <input class="btn btn-primary-up" id="up" name="up" placeholder="up" style="color:white;
                 text-align: center; margin: 0;
                     position: absolute;
                     top: 80%;
@@ -106,7 +156,7 @@
                     margin-right: -20%;
                     transform: translate(-50%, -50%); width:300px;  height:50px;"
                type="submit" value="I knew this word! (＾▽＾)">
-        <input class="btn btn-primary" id="down" name="down" placeholder="down" style="
+        <input class="btn btn-primary-up" id="down" name="down" placeholder="down" style="color:white;
                 text-align: center; margin: 0;
                     position: absolute;
                     top: 90%;
