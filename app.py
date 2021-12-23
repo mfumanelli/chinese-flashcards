@@ -5,6 +5,8 @@ import random
 
 app = Flask(__name__)
 
+df = character_scraping()
+
 
 @app.route('/', methods=["GET", "POST"])
 def main():
@@ -14,45 +16,31 @@ def main():
 
 @app.route('/flashcards', methods=['GET', 'POST'])
 def flashcards():
-    df = character_scraping()
-    df_chinese = df['Chinese']
-    df_pinyin = df['Pinyin']
-    df_Role = df['Role']
-    df_english = df['English']
-    return render_template("flashcards.html", flashcards_chinese=df_chinese[0], pinyin=df_pinyin[0],
-                           flashcards_english=df_english[0])
-
-
-@app.route('/flashcards-translation', methods=['GET', 'POST'])
-def translation():
-    df = character_scraping()
+    global df
     while df.shape[0] > 0:
-        print(df.shape[0])
-        random_i = random.randint(0, df.shape[0])
         if request.method == "GET":
-            if request.args.get('up') is None:
+            print(df.shape[0])
+            random_i = df.sample(1).index[0]
+            print(random_i)
+            print(request.args.get('up'))
+            #print(request.args.get('translate'))
+
+            df_chinese = df['Chinese'][random_i]
+            df_pinyin = df['Pinyin'][random_i]
+            df_english = df['English'][random_i]
+
+            if request.args.get('down') == "I didn't know this word! (￣︿￣)":
                 df = df.copy()
-                action = render_template("translation.html", flashcards_chinese=df['Chinese'][random_i],
-                                       pinyin=df['Pinyin'][random_i],
-                                       flashcards_english=df['English'][random_i])
+
             else:
-                action = render_template("translation.html", flashcards_chinese=df['Chinese'][random_i],
-                                           pinyin=df['Pinyin'][random_i],
-                                           flashcards_english=df['English'][random_i])
                 df = df.drop(random_i)
-            return action
 
-def contact():
-    if request.method == 'POST':
-        if request.form['submit_button'] == 'Do Something':
-            pass  # do something
-        elif request.form['submit_button'] == 'Do Something Else':
-            pass  # do something else
-        else:
-            pass  # unknown
-    elif request.method == 'GET':
-        return render_template('contact.html', form=form)
+            if df.shape[0] == 0:
+                return render_template("endpage.html")
 
+            return render_template("flashcards.html", flashcards_chinese=df_chinese,
+                               pinyin=df_pinyin,
+                               flashcards_english=df_english)
 
 if __name__ == "__main__":
     app.run(debug=False, port=8080, host='0.0.0.0')
