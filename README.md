@@ -8,4 +8,4 @@ Please just run
 ```
    python app.py  
 ```  
-to open the flashcard set in your browser. The cards are proposed each time in a random order. Clicking on **I knew this word! (＾▽＾)** that word will no longer be shown afterwards. On the contrary, clicking on **I didn't know this word! (T︿T)** the card will be reinserted into the  deck at a random position.
+to open the flashcard set in your browser. The cards are proposed each time in a random order. Clicking on **_I knew this word! (＾▽＾)_** that word will no longer be shown afterwards. On the contrary, clicking on **_I didn't know this word! (T︿T)_** the card will be reinserted into the  deck at a random position.
