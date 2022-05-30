@@ -7,7 +7,7 @@ A goal I have had for some time is to improve my Chinese, this repo was born wit
 
 # Usage
 
-Please just run  
+Please just run
 ```
    python app.py  
 ```  
